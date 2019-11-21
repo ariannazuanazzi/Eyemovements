@@ -10,6 +10,7 @@ eye.record_eye = 1; %want to record eyemovements?
 %stim.gray = %defines colour of background
 %stim.white = %defines colour of instructions
 %SubjectNumber = %number of subject for data saving
+%ntrials = 100;
 %----------------------------
 
 %% Initialize eyetracker
@@ -93,12 +94,24 @@ end
 
 %% Task
 %Trigger to eyelink for start task
+
 if eye.record_eye == 1
    Eyelink('Command', 'record_status_message "Task starts..."'); %message to experimenter
    Eyelink('Message', 'STARTTASK'); %codes for beginning of the task
 end
 
 % ---- task ----
+for i = 1:ntrials
+    
+%for each trial
+if eye.record_eye == 1
+   Eyelink('Command', 'record_status_message "Trial n.%d"', i); %message to experimenter
+   Eyelink('Message', 'TRIAL_%d', i); %codes for beginning of the task
+end
+
+% trial
+
+end
 
 %---------------
 
