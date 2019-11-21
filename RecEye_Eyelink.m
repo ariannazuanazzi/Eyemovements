@@ -106,7 +106,7 @@ for i = 1:ntrials
 %for each trial
 if eye.record_eye == 1
    Eyelink('Command', 'record_status_message "Trial n.%d"', i); %message to experimenter
-   Eyelink('Message', 'TRIAL_%d', i); %codes for beginning of the task
+   Eyelink('Message', 'TRIAL %d', i); %codes for beginning of the task
 end
 
 % trial
