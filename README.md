@@ -1,3 +1,3 @@
 # eyemovements_analyses
-Scripts in Matlab to analyse eye-movements recorded with Tobii or EyeLink
+Scripts in Matlab to record and analyse eye-movements with Tobii or EyeLink
 
