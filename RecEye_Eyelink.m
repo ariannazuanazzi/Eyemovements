@@ -93,7 +93,7 @@ Eyelink('StartRecording', [], [], [], 1);
 end
 
 %% Task
-%Trigger to eyelink for start task
+%Trigger to eyelink to start task
 
 if eye.record_eye == 1
    Eyelink('Command', 'record_status_message "Task starts..."'); %message to experimenter
@@ -115,7 +115,7 @@ end
 
 %---------------
 
-%Trigger to eyelink for end task
+%Trigger to eyelink to end task
 if eye.record_eye == 1
    Eyelink('Command', 'record_status_message "Task ends..."'); %message to experimenter
    Eyelink('Message', 'ENDTASK'); %codes for end of the task
